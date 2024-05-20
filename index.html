@@ -6,106 +6,77 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-      
-     body {
-    background-image: url('bg3.png'); /* Default background image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Prevent scrollbars */
-}
-
-/* Media query for screens smaller than 600px (typical mobile devices) */
-
-
-        h1 {
-            font-size: 5rem; /* Large font size */
-            color: #2ecc71; /* Green color */
-            text-align: center; /* Center align the text */
-            animation: bounce 1s ease infinite alternate; /* Animation for bouncing effect */
-            
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
-            text-transform: uppercase; /* Uppercase text */
-            position: absolute; /* Positioning for the top */
-            top: 20px; /* Adjust the distance from the top */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Center horizontally */
-            z-index: 1; /* Ensure the title is above other elements */
-            margin-left: -400px;
-        }
-
-        /* Adjust link position */
-        a {
-            margin-top: 200px; /* Adjust the distance from the title */
-        }
-
-         h1::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 120%;
-            height: 120%;
-            background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
-            border-radius: 50%; /* Circle */
-            transform: translate(-50%, -50%);
-            z-index: -1; /* Behind the text */
-            animation: pulse 2s linear infinite; /* Animation for pulsating light effect */
-        }
-        @media screen and (max-width: 570px) {
-    body {
-        background-image: url('img.jpg');
+      body {
+        background-image: url('bg3.png');
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: unset;/* Change background image for mobile */
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh; /* Change height to min-height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Prevent scrollbars */
     }
+    
     h1 {
-            font-size: 2rem; /* Large font size */
-            color: #2ecc71; /* Green color */
-            text-align: center; /* Center align the text */
-            animation: bounce 1s ease infinite alternate; /* Animation for bouncing effect */
-            
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
-            text-transform: uppercase; /* Uppercase text */
-            position: absolute; /* Positioning for the top */
-            top: 20px; /* Adjust the distance from the top */
-            
-            transform: translateX(-50%); /* Center horizontally */
-            z-index: 1; /* Ensure the title is above other elements */
+        font-size: 5rem;
+        color: #2ecc71;
+        text-align: center;
+        animation: bounce 1s ease infinite alternate;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        text-transform: uppercase;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        margin-left: -400px;
+    }
+    
+    a {
+        margin-top: 200px;
+    }
+    
+    /* Media query for screens smaller than 600px (typical mobile devices) */
+    @media screen and (max-width: 570px) {
+        body {
+            background-image: url('img.jpg');
+            background-repeat: no-repeat;
+            background-position: unset;
+        }
+        h1 {
+            font-size: 2rem;
             margin-left: -136px;
         }
-
-}
-        /* Keyframes for pulsating light effect */
-        @keyframes pulse {
-            0% {
-                transform: translate(-50%, -50%) scale(0.9);
-                opacity: 0.7; /* Semi-transparent */
-            }
-            50% {
-                opacity: 0; /* Fully transparent */
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(1.5);
-                opacity: 0; /* Fully transparent */
-            }
+    }
+    
+    /* Keyframes for pulsating light effect */
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0.7;
         }
-
-        /* Keyframes for bouncing effect */
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-10px);
-            }
+        50% {
+            opacity: 0;
         }
+        100% {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+    }
+    
+    /* Keyframes for bouncing effect */
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
     </style>
 </head>
 <body>
